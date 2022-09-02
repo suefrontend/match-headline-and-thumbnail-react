@@ -1,8 +1,18 @@
-import logo from './logo.svg';
+import Headline from './components/Headline';
 import './App.css';
+import ThumbnailList from './components/ThumbnailList';
 
 function App() {
-	return <div className='App'>App</div>;
+	return (
+		<div className='App'>
+			<div>
+				<Headline />
+			</div>
+			<div>
+				<ThumbnailList />
+			</div>
+		</div>
+	);
 }
 
 export default App;
