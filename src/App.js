@@ -5,7 +5,6 @@ import ThumbnailList from './components/ThumbnailList';
 
 function App() {
 	const [articles, setArticles] = useState([]);
-	const [headline, setHeadline] = useState([]);
 
 	useEffect(() => {
 		const fetchArticles = async () => {
@@ -14,16 +13,9 @@ function App() {
 			);
 			const response = await data.json();
 			setArticles(response.items);
-			setHeadline(response.items.title);
 		};
 		fetchArticles();
 	}, []);
-
-	// console.log('articles', articles);
-	// console.log('headline', headline);
-
-	const test = articles.map((article) => article.title);
-	// console.log('test', test);
 
 	return (
 		<div className='App'>
