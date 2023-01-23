@@ -1,8 +1,9 @@
 import Thumbnail from './Thumbnail';
+import classes from './thumbnail.module.css';
 
 const ThumbnailList = (props) => {
 	return (
-		<div className='thumbnail'>
+		<div className={classes.thumbnail}>
 			<Thumbnail />
 		</div>
 	);

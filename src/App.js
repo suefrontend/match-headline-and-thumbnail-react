@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import Headline from './components/Headline';
-import './App.css';
+import classes from './App.module.css';
 import ThumbnailList from './components/ThumbnailList';
+import Background from './components/Background';
 
 function App() {
 	const [articles, setArticles] = useState([]);
@@ -18,14 +19,17 @@ function App() {
 	}, []);
 
 	return (
-		<div className='App'>
-			<div>
-				<Headline articles={articles} />
+		<>
+			<Background />
+			<div className={classes.wrapper}>
+				<div className={classes.container}>
+					<div className={classes.content}>
+						<Headline articles={articles} />
+						<ThumbnailList />
+					</div>
+				</div>
 			</div>
-			<div>
-				<ThumbnailList />
-			</div>
-		</div>
+		</>
 	);
 }
 
