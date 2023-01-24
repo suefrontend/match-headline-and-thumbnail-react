@@ -10,7 +10,7 @@ const Background = () => {
 
 	return (
 		<div className={classes.video_wrapper}>
-			<video autoplay muted loop className={classes.video} ref={vidRef}>
+			<video autoPlay muted loop className={classes.video} ref={vidRef}>
 				<source src={bg_video} type='video/mp4' />
 			</video>
 		</div>

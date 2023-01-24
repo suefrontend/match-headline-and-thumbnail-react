@@ -25,7 +25,7 @@ function App() {
 				<div className={classes.container}>
 					<div className={classes.content}>
 						<Headline articles={articles} />
-						<ThumbnailList />
+						<ThumbnailList articles={articles} />
 					</div>
 				</div>
 			</div>
