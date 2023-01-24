@@ -1,9 +1,11 @@
 import classes from './thumbnail.module.css';
 
-const Thumbnail = () => {
+const Thumbnail = (props) => {
+	const images = props.articles.map((article) => article.description);
+
 	return (
-		<ul class={classes.thumbnail__list}>
-			<li>Thumbnail</li>
+		<ul className={classes.thumbnail__list}>
+			<li dangerouslySetInnerHTML={{ __html: images }} />
 		</ul>
 	);
 };
