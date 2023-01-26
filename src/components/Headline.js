@@ -1,7 +1,7 @@
 import classes from '../App.module.css';
 
 const Headline = (props) => {
-	console.log('answerIndex Headline: ', props.answerIndex);
+	const { articles, answerHeadline } = props;
 
 	return (
 		<div className={classes.headline}>
@@ -9,9 +9,8 @@ const Headline = (props) => {
 				<p className='headline__text text-lower-opacity'>
 					[ Choose thumbnail best matches the headline ]
 				</p>
-				{/* {props.articles.map((article) => (
-					<h2 className={classes.headline__heading}>{article.title}</h2>
-				))} */}
+
+				<h2 className={classes.headline__heading}>{answerHeadline}</h2>
 			</div>
 		</div>
 	);

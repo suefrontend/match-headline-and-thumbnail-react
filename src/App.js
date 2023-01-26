@@ -6,8 +6,16 @@ import Background from './components/Background';
 
 function App() {
 	const [articles, setArticles] = useState([]);
-	// const [answerIndex, setAnswerIndex] = useState(null);
-	let answerIndex = Math.floor(Math.random() * 10);
+	const [answerIndex, setAnswerIndex] = useState(
+		Math.floor(Math.random() * 10)
+	);
+	const [answerHeadline, setAnswerHeadline] = useState('');
+
+	useEffect(() => {
+		let answer = Math.floor(Math.random() * 10);
+
+		setAnswerIndex(answer);
+	});
 
 	useEffect(() => {
 		const fetchArticles = async () => {
@@ -16,9 +24,10 @@ function App() {
 			);
 			const response = await data.json();
 
-			console.log('answerIndex', answerIndex);
+			// console.log('answerIndex', answerIndex);
 
 			setArticles(response.items);
+			setAnswerHeadline(response.items[answerIndex].title);
 		};
 		fetchArticles();
 	}, []);
@@ -29,8 +38,8 @@ function App() {
 			<div className={classes.wrapper}>
 				<div className={classes.container}>
 					<div className={classes.content}>
-						<Headline articles={articles} answerIndex={answerIndex} />
-						<ThumbnailList articles={articles} answerIndex={answerIndex} />
+						<Headline articles={articles} answerHeadline={answerHeadline} />
+						{/* <ThumbnailList articles={articles} answerIndex={answerIndex} /> */}
 					</div>
 				</div>
 			</div>
