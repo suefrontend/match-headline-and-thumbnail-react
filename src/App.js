@@ -12,19 +12,11 @@ function App() {
 	const [answerHeadline, setAnswerHeadline] = useState('');
 
 	useEffect(() => {
-		let answer = Math.floor(Math.random() * 10);
-
-		setAnswerIndex(answer);
-	});
-
-	useEffect(() => {
 		const fetchArticles = async () => {
 			const data = await fetch(
 				'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frss.cbc.ca%2Flineup%2Ftopstories.xml'
 			);
 			const response = await data.json();
-
-			// console.log('answerIndex', answerIndex);
 
 			setArticles(response.items);
 			setAnswerHeadline(response.items[answerIndex].title);
