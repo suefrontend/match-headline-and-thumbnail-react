@@ -1,6 +1,8 @@
 import classes from '../App.module.css';
 
 const Headline = (props) => {
+	console.log('answerIndex Headline: ', props.answerIndex);
+
 	return (
 		<div className={classes.headline}>
 			<div className={classes.headline__content}>

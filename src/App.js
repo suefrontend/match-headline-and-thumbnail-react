@@ -6,6 +6,8 @@ import Background from './components/Background';
 
 function App() {
 	const [articles, setArticles] = useState([]);
+	// const [answerIndex, setAnswerIndex] = useState(null);
+	let answerIndex = Math.floor(Math.random() * 10);
 
 	useEffect(() => {
 		const fetchArticles = async () => {
@@ -13,6 +15,9 @@ function App() {
 				'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frss.cbc.ca%2Flineup%2Ftopstories.xml'
 			);
 			const response = await data.json();
+
+			console.log('answerIndex', answerIndex);
+
 			setArticles(response.items);
 		};
 		fetchArticles();
@@ -24,8 +29,8 @@ function App() {
 			<div className={classes.wrapper}>
 				<div className={classes.container}>
 					<div className={classes.content}>
-						<Headline articles={articles} />
-						<ThumbnailList articles={articles} />
+						<Headline articles={articles} answerIndex={answerIndex} />
+						<ThumbnailList articles={articles} answerIndex={answerIndex} />
 					</div>
 				</div>
 			</div>

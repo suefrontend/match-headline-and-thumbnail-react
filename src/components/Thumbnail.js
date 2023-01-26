@@ -1,7 +1,9 @@
 import classes from './thumbnail.module.css';
 
 const Thumbnail = (props) => {
-	const thumbnailList = props.articles.map((article) => article.description);
+	const { articles } = props;
+
+	const thumbnailList = articles.map((article) => article.description);
 
 	const thumbnails = thumbnailList
 		.map((thumbnail) => thumbnail.match(/<img[^>]+>/gi))
