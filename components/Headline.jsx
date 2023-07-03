@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 
 function Headline() {
   return <div>Headline</div>;
