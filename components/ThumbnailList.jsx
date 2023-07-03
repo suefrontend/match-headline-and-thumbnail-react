@@ -4,7 +4,7 @@ import ThumbnailItem from "@components/ThumbnailItem";
 
 function ThumbnailList() {
   return (
-    <div>
+    <div className="thumbnail">
       <ThumbnailItem />
     </div>
   );
