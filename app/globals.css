@@ -153,3 +153,119 @@
     font-size: 5vw;
   }
 }
+.thumbnail__list {
+  /* width: 85%; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* padding-top: 1rem; */
+}
+[class^="thumbnail__item-"] {
+  width: calc((100% - 20px) / 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+/* .thumbnail-zoom {  
+  transition: all .3s ease-in-out;
+} */
+/* .thumbnail-zoom:hover {
+  transform: scale(1.05);
+} */
+/* .thumbnail-bigger {
+  transform: scale(1.05);
+} */
+[class^="thumbnail__item-"]:nth-child(1),
+[class^="thumbnail__item-"]:nth-child(2) {
+  margin-bottom: 20px;
+}
+.thumbnail__item__img {
+  box-shadow: rgba(139, 0, 0, 0.6) 2px 2px 4px 2px;
+  /* border-radius: 7px; */
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.thumbnail-glow {
+  box-shadow: rgba(255, 255, 255, 1) 0px 0px 8px 3px;
+}
+[class^="thumbnail__item"] img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+.thumbnail-no-pointer:hover {
+  cursor: default;
+}
+.thumbnail-pointer:hover {
+  cursor: pointer;
+}
+.thumbnail__item__text {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 0.8rem;
+  height: 1rem;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* hover overlay effect */
+.thumbnail__item__img {
+  margin-bottom: 0;
+}
+.thumbnail__item__img {
+  position: relative;
+}
+.thumbnail__item__img:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 0;
+  background: #000;
+  opacity: 0.5;
+  transition: all 0.5s ease;
+}
+.thumbnail__item__img:hover:after {
+  height: 100%;
+  top: 0;
+}
+.black-out .thumbnail__item__img:after {
+  height: 100%;
+  top: 0;
+}
+.thumbnail-zoom:hover,
+.thumbnail-no-pointer {
+  transform: none;
+}
+@media (max-width: 1023px) {
+  .wrapper,
+  .content {
+    height: 96vh;
+  }
+  .thumbnail {
+    padding: 10px;
+  }
+  .thumbnail__list {
+    flex-direction: row;
+    height: 100%;
+  }
+  [class^="thumbnail__item-"] {
+    width: 100%;
+    height: calc((100% - 40px) / 4);
+  }
+  [class^="thumbnail__item-"]:nth-child(1),
+  [class^="thumbnail__item-"]:nth-child(2) {
+    margin-bottom: 0;
+  }
+  .thumbnail__item__img {
+    display: flex;
+    align-items: center;
+  }
+}

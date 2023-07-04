@@ -2,10 +2,17 @@
 
 import ThumbnailItem from "@components/ThumbnailItem";
 
-function ThumbnailList() {
+function ThumbnailList(props) {
+  const { items } = props;
+  // console.log("items", items);
+
+  const renderedList = items.map((item) => {
+    return <ThumbnailItem image={item.description} />;
+  });
+
   return (
     <div className="thumbnail">
-      <ThumbnailItem />
+      <ul class="thumbnail__list">{renderedList}</ul>
     </div>
   );
 }
