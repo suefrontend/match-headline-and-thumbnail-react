@@ -3,6 +3,7 @@
 import React, { useRef, useEffect } from "react";
 import Headline from "@components/Headline";
 import ThumbnailList from "@components/ThumbnailList";
+import Modal from "@components/Modal";
 
 function Home() {
   const videoRef = useRef();
@@ -182,6 +183,7 @@ function Home() {
           <ThumbnailList items={items} />
         </div>
       </main>
+      <Modal />
     </>
   );
 }
