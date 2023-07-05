@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Headline from "@components/Headline";
 import ThumbnailList from "@components/ThumbnailList";
+import Modal from "@components/Modal";
 
 function Home() {
   const videoRef = useRef();
@@ -163,6 +164,10 @@ function Home() {
     //   categories: ["Radio/The Current"],
     // },
   ];
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <>
@@ -179,9 +184,16 @@ function Home() {
       <main className="wrapper">
         <div className="content">
           <Headline items={items} />
-          <ThumbnailList items={items} />
+          <ThumbnailList items={items} openModal={openModal} />
         </div>
       </main>
+      {isModalOpen && (
+        <Modal
+          isModalOpen={isModalOpen}
+          closeModal={closeModal}
+          item={items[0]}
+        />
+      )}
     </>
   );
 }

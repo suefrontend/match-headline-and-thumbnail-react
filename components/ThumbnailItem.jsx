@@ -2,6 +2,9 @@
 import Image from "next/image";
 
 function ThumbnailItem(props) {
+  const { openModal } = props;
+
+  // Create div element so to access to HTML tags
   const tempElement = document.createElement("div");
   tempElement.innerHTML = props.image;
 
@@ -10,21 +13,21 @@ function ThumbnailItem(props) {
   const src = imgTag.getAttribute("src");
   const alt = imgTag.getAttribute("alt");
   const width = imgTag.getAttribute("width");
-  const title = imgTag.getAttribute("title");
   const height = imgTag.getAttribute("height");
 
-  const pTag = tempElement.getElementsByTagName("p")[0];
-  const pContent = pTag.innerHTML.trim();
+  const handleShowClick = (e) => {
+    e.preventDefault();
+    openModal();
+  };
 
   return (
     <>
-      <li>
+      <li onClick={handleShowClick}>
         <figure className="thumbnail__item__img">
           <Image src={src} alt={alt} width={width} height={height} />
         </figure>
         <span className="thumbnail__item__text"></span>
       </li>
-      {/* <p>p content: {pContent}</p> */}
     </>
   );
 }
