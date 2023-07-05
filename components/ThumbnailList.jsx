@@ -11,7 +11,7 @@ function ThumbnailList(props) {
 
   return (
     <div className="thumbnail">
-      <ul className="thumbnail__list">{renderedList}</ul>
+      <ul className="thumbnail__list flex flex-wrap">{renderedList}</ul>
     </div>
   );
 }

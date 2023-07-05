@@ -22,7 +22,7 @@ function ThumbnailItem(props) {
 
   return (
     <>
-      <li onClick={handleShowClick}>
+      <li onClick={handleShowClick} className="w-1/2">
         <figure className="thumbnail__item__img">
           <Image src={src} alt={alt} width={width} height={height} />
         </figure>

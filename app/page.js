@@ -182,7 +182,7 @@ function Home() {
         ></video>
       </div>
       <main className="wrapper">
-        <div className="content lg:flex-row md:flex-column">
+        <div className="content xl:flex">
           <Headline item={items[0]} />
           <ThumbnailList items={items} openModal={openModal} />
         </div>
