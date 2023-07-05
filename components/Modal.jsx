@@ -1,13 +1,27 @@
 import { createPortal } from "react-dom";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
-function Modal() {
+function Modal(props) {
+  const { showModal, openModal, closeModal } = props;
+
+  const handleCloseClick = (e) => {
+    e.preventDefault();
+    closeModal();
+  };
+
   const modalContent = (
     <div className="detail">
       <div className="detail__img">
         Image
-        <svg className="icon icon-cross" onClick="resetQuiz()">
-          {/* <use xlink:href="images/sprite.svg#icon-cancel-circle"></use> */}
-        </svg>
+        {/* <br /> */}
+        {/* <svg >
+           <use xlink:href="images/sprite.svg#icon-cancel-circle"></use> 
+        </svg> */}
+        <AiOutlineCloseCircle
+          className="icon icon-cross"
+          onClick={handleCloseClick}
+        />
+        {/* <span onClick={handleCloseClick}>X</span> */}
       </div>
       <div className="detail__content">
         <span className="detail__date">Published Date</span>

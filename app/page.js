@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Headline from "@components/Headline";
 import ThumbnailList from "@components/ThumbnailList";
 import Modal from "@components/Modal";
@@ -164,6 +164,10 @@ function Home() {
     //   categories: ["Radio/The Current"],
     // },
   ];
+  const [showModal, setShowModal] = useState(true);
+
+  const openModal = () => setShowModal(true);
+  const closeModal = () => setShowModal(false);
 
   return (
     <>
@@ -183,7 +187,13 @@ function Home() {
           <ThumbnailList items={items} />
         </div>
       </main>
-      <Modal />
+      {showModal && (
+        <Modal
+          showModal={showModal}
+          openModal={openModal}
+          closeModal={closeModal}
+        />
+      )}
     </>
   );
 }
