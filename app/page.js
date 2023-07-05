@@ -183,7 +183,7 @@ function Home() {
       </div>
       <main className="wrapper">
         <div className="content">
-          <Headline items={items} />
+          <Headline item={items[0]} />
           <ThumbnailList items={items} openModal={openModal} />
         </div>
       </main>
