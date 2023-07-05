@@ -3,13 +3,14 @@ import { createPortal } from "react-dom";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
 function Modal(props) {
-  const { showModal, openModal, closeModal, item } = props;
+  const { closeModal, item } = props;
 
   const handleCloseClick = (e) => {
     e.preventDefault();
     closeModal();
   };
 
+  // Create div element so to access to HTML tags
   const tempElement = document.createElement("div");
   tempElement.innerHTML = item.content;
 

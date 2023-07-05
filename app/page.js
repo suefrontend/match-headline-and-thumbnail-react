@@ -164,10 +164,10 @@ function Home() {
     //   categories: ["Radio/The Current"],
     // },
   ];
-  const [showModal, setShowModal] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => setShowModal(true);
-  const closeModal = () => setShowModal(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <>
@@ -184,13 +184,12 @@ function Home() {
       <main className="wrapper">
         <div className="content">
           <Headline items={items} />
-          <ThumbnailList items={items} />
+          <ThumbnailList items={items} openModal={openModal} />
         </div>
       </main>
-      {showModal && (
+      {isModalOpen && (
         <Modal
-          showModal={showModal}
-          openModal={openModal}
+          isModalOpen={isModalOpen}
           closeModal={closeModal}
           item={items[0]}
         />
