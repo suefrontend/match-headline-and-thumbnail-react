@@ -192,6 +192,7 @@ function Home() {
           showModal={showModal}
           openModal={openModal}
           closeModal={closeModal}
+          item={items[0]}
         />
       )}
     </>

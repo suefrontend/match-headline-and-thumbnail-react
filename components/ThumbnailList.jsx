@@ -12,7 +12,7 @@ function ThumbnailList(props) {
 
   return (
     <div className="thumbnail">
-      <ul class="thumbnail__list">{renderedList}</ul>
+      <ul className="thumbnail__list">{renderedList}</ul>
     </div>
   );
 }
