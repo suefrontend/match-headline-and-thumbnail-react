@@ -22,11 +22,11 @@ function ThumbnailItem(props) {
 
   return (
     <>
-      <li onClick={handleShowClick}>
-        <figure className="thumbnail__item__img">
-          <Image src={src} alt={alt} width={width} height={height} />
+      <li onClick={handleShowClick} className="w-1/2 max-lg:w-full">
+        <figure className="thumbnail__item__img w-full">
+          <Image src={src} alt={alt} width={width} height={height} className="w-full" />
         </figure>
-        <span className="thumbnail__item__text"></span>
+        <span className="thumbnail__item__text text-white text-sm">Incorrect!</span>
       </li>
     </>
   );

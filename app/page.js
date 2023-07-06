@@ -171,22 +171,24 @@ function Home() {
 
   return (
     <>
-      <div className="video-wrapper">
+      <div className="video-wrapper relative">
         <video
           ref={videoRef}
           src="images/background.mp4"
           width="250"
           loop
           muted
-          className="video"
+          className="object-cover h-screen w-full"
         ></video>
       </div>
-      <main className="wrapper">
-        <div className="content">
+      {/* wrapper - body */}
+      <div className="wrapper p-4">
+        {/* content - background */}
+        <div className="content max-lg:w-4/5 lg:w-[96vw] 2xl:w-[90vw] lg:flex">
           <Headline item={items[0]} />
           <ThumbnailList items={items} openModal={openModal} />
         </div>
-      </main>
+      </div>
       {isModalOpen && (
         <Modal
           isModalOpen={isModalOpen}
