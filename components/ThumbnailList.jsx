@@ -10,6 +10,7 @@ function ThumbnailList(props) {
     return (
       <ThumbnailItem
         key={index}
+        index={index}
         image={items[index].description}
         answerIndex={answerIndex}
         thumbnailIndex={index}

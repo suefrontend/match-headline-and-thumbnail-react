@@ -2,7 +2,7 @@
 import Image from "next/image";
 
 function ThumbnailItem(props) {
-  const { openModal, answerIndex } = props;
+  const { openModal, answerIndex, index } = props;
 
   // Create div element so to access to HTML tags
   const tempElement = document.createElement("div");
@@ -15,21 +15,29 @@ function ThumbnailItem(props) {
   const width = imgTag.getAttribute("width");
   const height = imgTag.getAttribute("height");
 
-  const checkAnswer = () => {
-    //
-  };
-
   const handleShowClick = (e) => {
     e.preventDefault();
 
     // Open modal only when correct thumbnail is clicked
     // if(checkAnswer) { openModal }
-    openModal();
+    const dataIndex = e.currentTarget.getAttribute("data-index");
+    const parsedDataIndex = parseInt(dataIndex);
+
+    if (parsedDataIndex === answerIndex) {
+      console.log("Correct");
+      openModal();
+    } else {
+      console.log("Incorrect");
+    }
   };
 
   return (
     <>
-      <li onClick={handleShowClick} className="w-1/2 max-lg:w-full">
+      <li
+        onClick={handleShowClick}
+        className="w-1/2 max-lg:w-full"
+        data-index={index}
+      >
         <figure className="thumbnail__item__img w-full">
           <Image
             src={src}
