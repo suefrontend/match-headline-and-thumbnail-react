@@ -169,6 +169,11 @@ function Home() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
+  const newsIndex = items.length - 1;
+  // console.log("newsIndex", newsIndex);
+  const answerIndex = Math.round(Math.random() * newsIndex);
+  console.log("answerIndex top page", answerIndex);
+
   return (
     <>
       <div className="video-wrapper relative">
@@ -185,8 +190,12 @@ function Home() {
       <div className="wrapper p-4">
         {/* content - background */}
         <div className="content max-lg:w-4/5 lg:w-[96vw] 2xl:w-[90vw] lg:flex">
-          <Headline item={items[0]} />
-          <ThumbnailList items={items} openModal={openModal} />
+          <Headline item={items[answerIndex]} />
+          <ThumbnailList
+            items={items}
+            answerIndex={answerIndex}
+            openModal={openModal}
+          />
         </div>
       </div>
       {isModalOpen && (
