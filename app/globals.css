@@ -90,3 +90,6 @@
 .btn-link:hover {
   color: #fff5f5;
 }
+.thumbnail-overlay {
+  background: rgba(0, 0, 0, 0.54);
+}

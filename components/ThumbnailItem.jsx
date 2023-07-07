@@ -1,8 +1,11 @@
 "use client";
 import Image from "next/image";
+import { useState } from "react";
 
 function ThumbnailItem(props) {
   const { openModal, answerIndex, index } = props;
+  const [result, setResult] = useState(null);
+  const [showButtons, setShowButton] = useState(false);
 
   // Create div element so to access to HTML tags
   const tempElement = document.createElement("div");
@@ -24,9 +27,15 @@ function ThumbnailItem(props) {
     const parsedDataIndex = parseInt(dataIndex);
 
     if (parsedDataIndex === answerIndex) {
+      setResult("Correct!");
       console.log("Correct");
-      openModal();
+      setShowButton(true);
+
+      // Make other thumbnails unclickable and turn cursor to default
+      return;
+      // openModal();
     } else {
+      setResult("Incorrect");
       console.log("Incorrect");
     }
   };
@@ -35,7 +44,7 @@ function ThumbnailItem(props) {
     <>
       <li
         onClick={handleShowClick}
-        className="w-1/2 max-lg:w-full"
+        className="max-lg:w-full relative cursor-pointer"
         data-index={index}
       >
         <figure className="thumbnail__item__img w-full">
@@ -47,9 +56,21 @@ function ThumbnailItem(props) {
             className="w-full"
           />
         </figure>
-        <span className="thumbnail__item__text text-white text-sm">
-          Incorrect!
-        </span>
+        {result && (
+          <div className="thumbnail-overlay text-white text-sm absolute z-10 top-0 left-0 w-full h-full flex flex-col items-center justify-center">
+            <span className={`mb-3 ${showButtons && "text-xl"}`}>{result}</span>
+            {showButtons && (
+              <div className="flex flex-col gap-4">
+                <button className="bg-red text-white py-2 px-5 flex-1">
+                  More Detail
+                </button>
+                <span className="text-gray-400 text-center underline text-xs flex-1">
+                  Reset
+                </span>
+              </div>
+            )}
+          </div>
+        )}
       </li>
     </>
   );
