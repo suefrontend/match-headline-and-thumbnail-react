@@ -213,7 +213,7 @@ function Home() {
         <div className="content max-lg:w-4/5 lg:w-[96vw] 2xl:w-[90vw] lg:flex">
           <Headline item={items[answerIndex]} />
           <ThumbnailList
-            thumbnails={getThreeThumbnails(items)}
+            indexOfThumbnail={getThreeThumbnails(items)}
             items={items}
             answerIndex={answerIndex}
             openModal={openModal}
