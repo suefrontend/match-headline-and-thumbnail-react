@@ -8,6 +8,28 @@ import Modal from "@components/Modal";
 function Home() {
   const videoRef = useRef();
   const [answerIndex, setAnswerIndex] = useState(null);
+  const [thumbnails, setThumbnails] = useState([]);
+
+  const getThreeThumbnails = (items, answerIndex) => {
+    // 1. Create an array of thumbnails
+    const indexOfThumbnails = [answerIndex];
+
+    // 2. If thumbnails[] has 4 index, return. No need to add anymore
+    while (indexOfThumbnails.length < 4) {
+      // 3. Randomly generate index
+      const randomlyGeneratedIndex = Math.round(Math.random() * items.length);
+
+      // 4. Condition for avoid putting duplicate index
+      if (
+        randomlyGeneratedIndex !== answerIndex &&
+        !indexOfThumbnails.includes(randomlyGeneratedIndex)
+      ) {
+        indexOfThumbnails.push(randomlyGeneratedIndex);
+      }
+    }
+
+    setThumbnails(indexOfThumbnails);
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -17,6 +39,8 @@ function Home() {
     const lengthOfNews = items.length - 1;
     const index = Math.round(Math.random() * lengthOfNews);
     setAnswerIndex(index);
+
+    getThreeThumbnails(items, index);
   }, []);
 
   const items = [
@@ -176,27 +200,6 @@ function Home() {
 
   console.log("answerIndex", answerIndex);
 
-  const getThreeThumbnails = (items) => {
-    // 1. Create an array of thumbnails
-    const thumbnails = [answerIndex];
-
-    // 2. If thumbnails[] has 4 index, return. No need to add anymore
-    while (thumbnails.length < 4) {
-      // 3. Randomly generate index
-      const randomlyGeneratedIndex = Math.round(Math.random() * items.length);
-
-      // 4. Condition for avoid putting duplicate index
-      if (
-        randomlyGeneratedIndex !== answerIndex &&
-        !thumbnails.includes(randomlyGeneratedIndex)
-      ) {
-        thumbnails.push(randomlyGeneratedIndex);
-      }
-    }
-
-    return thumbnails;
-  };
-
   return (
     <>
       <div className="video-wrapper relative">
@@ -213,11 +216,11 @@ function Home() {
       <div className="wrapper p-4">
         {/* content - background */}
         <div className="content max-lg:w-4/5 lg:w-[96vw] 2xl:w-[90vw] lg:flex">
-          {answerIndex && (
+          {answerIndex && thumbnails && (
             <>
               <Headline item={items[answerIndex]} />
               <ThumbnailList
-                indexOfThumbnail={getThreeThumbnails(items)}
+                indexOfThumbnail={thumbnails}
                 items={items}
                 answerIndex={answerIndex}
                 openModal={openModal}

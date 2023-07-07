@@ -4,6 +4,7 @@ import ThumbnailItem from "@components/ThumbnailItem";
 
 function ThumbnailList(props) {
   const { items, openModal, indexOfThumbnail, answerIndex } = props;
+  console.log("indexOfThumbnail", indexOfThumbnail);
 
   const renderedList = indexOfThumbnail.map((index) => {
     return (
