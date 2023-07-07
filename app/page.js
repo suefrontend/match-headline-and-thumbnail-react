@@ -7,11 +7,16 @@ import Modal from "@components/Modal";
 
 function Home() {
   const videoRef = useRef();
+  const [answerIndex, setAnswerIndex] = useState(null);
 
   useEffect(() => {
     setTimeout(() => {
       videoRef.current.play();
     }, 5000);
+
+    const lengthOfNews = items.length - 1;
+    const index = Math.round(Math.random() * lengthOfNews);
+    setAnswerIndex(index);
   }, []);
 
   const items = [
@@ -169,10 +174,7 @@ function Home() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  const lengthOfNews = items.length - 1;
-
-  const answerIndex = Math.round(Math.random() * lengthOfNews);
-  console.log("answerIndex top page", answerIndex);
+  console.log("answerIndex", answerIndex);
 
   const getThreeThumbnails = (items) => {
     // 1. Create an array of thumbnails
@@ -181,7 +183,7 @@ function Home() {
     // 2. If thumbnails[] has 4 index, return. No need to add anymore
     while (thumbnails.length < 4) {
       // 3. Randomly generate index
-      const randomlyGeneratedIndex = Math.round(Math.random() * lengthOfNews);
+      const randomlyGeneratedIndex = Math.round(Math.random() * items.length);
 
       // 4. Condition for avoid putting duplicate index
       if (
@@ -211,20 +213,24 @@ function Home() {
       <div className="wrapper p-4">
         {/* content - background */}
         <div className="content max-lg:w-4/5 lg:w-[96vw] 2xl:w-[90vw] lg:flex">
-          <Headline item={items[answerIndex]} />
-          <ThumbnailList
-            indexOfThumbnail={getThreeThumbnails(items)}
-            items={items}
-            answerIndex={answerIndex}
-            openModal={openModal}
-          />
+          {answerIndex && (
+            <>
+              <Headline item={items[answerIndex]} />
+              <ThumbnailList
+                indexOfThumbnail={getThreeThumbnails(items)}
+                items={items}
+                answerIndex={answerIndex}
+                openModal={openModal}
+              />
+            </>
+          )}
         </div>
       </div>
       {isModalOpen && (
         <Modal
           isModalOpen={isModalOpen}
           closeModal={closeModal}
-          item={items[0]}
+          item={items[answerIndex]}
         />
       )}
     </>

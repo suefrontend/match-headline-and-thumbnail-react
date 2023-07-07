@@ -3,11 +3,17 @@
 import ThumbnailItem from "@components/ThumbnailItem";
 
 function ThumbnailList(props) {
-  const { items, openModal, indexOfThumbnail } = props;
+  const { items, openModal, indexOfThumbnail, answerIndex } = props;
 
   const renderedList = indexOfThumbnail.map((index) => {
     return (
-      <ThumbnailItem image={items[index].description} openModal={openModal} />
+      <ThumbnailItem
+        key={index}
+        image={items[index].description}
+        answerIndex={answerIndex}
+        thumbnailIndex={index}
+        openModal={openModal}
+      />
     );
   });
 
