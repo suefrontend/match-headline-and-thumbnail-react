@@ -15,36 +15,36 @@ function Home() {
   }, []);
 
   const items = [
-    // {
-    //   title:
-    //     "Negotiations to end B.C. ports strike stall as retailers warn of continent-wide impact",
-    //   pubDate: "2022-06-18 12:02:05",
-    //   link: "https://www.cbc.ca/news/canada/british-columbia/port-strike-1.6895907?cmp=rss",
-    //   guid: "1.6493561",
-    //   author: "",
-    //   thumbnail: "",
-    //   description:
-    //     '\n<img src="https://i.cbc.ca/1.6895919.1688417271!/cumulusImage/httpImage/image.jpg_gen/derivatives/16x9_460/port-strike-vancouver.jpg" alt="PORT STRIKE VANCOUVER" width="460" title="An International Longshore and Warehouse Union worker pickets outside of Pacific Coast Terminals in Port Moody, British Columbia on Monday, July 3, 2023." height="259"><p></p>\n',
-    //   content:
-    //     '\n<img src="https://i.cbc.ca/1.6895919.1688417271!/cumulusImage/httpImage/image.jpg_gen/derivatives/16x9_460/port-strike-vancouver.jpg" alt="PORT STRIKE VANCOUVER" width="460" title="An International Longshore and Warehouse Union worker pickets outside of Pacific Coast Terminals in Port Moody, British Columbia on Monday, July 3, 2023." height="259"><p></p>\n',
-    //   enclosure: {},
-    //   categories: ["News"],
-    // },
-    // {
-    //   title:
-    //     "Destructive Alberta tornado stronger than 95% that touch down in Canada, researcher says",
-    //   pubDate: "2023-07-03 00:06:11",
-    //   link: "https://www.cbc.ca/news/canada/calgary/tornado-researcher-connell-miller-carstairs-didsbury-ef2-1.6895578?cmp=rss",
-    //   guid: "1.6895176",
-    //   author: "",
-    //   thumbnail: "",
-    //   description:
-    //     '\n<img src="https://i.cbc.ca/1.6895048.1688410745!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_460/tornado.jpg" alt="tornado" width="460" title="A house is no longer visible after a tornado in central Alberta. A woman was rescued from her basement in this area Saturday. " height="259"><p></p>\n',
-    //   content:
-    //     '\n<img src="https://i.cbc.ca/1.6895048.1688410745!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_460/tornado.jpg" alt="tornado" width="460" title="A house is no longer visible after a tornado in central Alberta. A woman was rescued from her basement in this area Saturday. " height="259"><p></p>\n',
-    //   enclosure: {},
-    //   categories: ["News/Canada"],
-    // },
+    {
+      title:
+        "Negotiations to end B.C. ports strike stall as retailers warn of continent-wide impact",
+      pubDate: "2022-06-18 12:02:05",
+      link: "https://www.cbc.ca/news/canada/british-columbia/port-strike-1.6895907?cmp=rss",
+      guid: "1.6493561",
+      author: "",
+      thumbnail: "",
+      description:
+        '\n<img src="https://i.cbc.ca/1.6895919.1688417271!/cumulusImage/httpImage/image.jpg_gen/derivatives/16x9_460/port-strike-vancouver.jpg" alt="PORT STRIKE VANCOUVER" width="460" title="An International Longshore and Warehouse Union worker pickets outside of Pacific Coast Terminals in Port Moody, British Columbia on Monday, July 3, 2023." height="259"><p></p>\n',
+      content:
+        '\n<img src="https://i.cbc.ca/1.6895919.1688417271!/cumulusImage/httpImage/image.jpg_gen/derivatives/16x9_460/port-strike-vancouver.jpg" alt="PORT STRIKE VANCOUVER" width="460" title="An International Longshore and Warehouse Union worker pickets outside of Pacific Coast Terminals in Port Moody, British Columbia on Monday, July 3, 2023." height="259"><p></p>\n',
+      enclosure: {},
+      categories: ["News"],
+    },
+    {
+      title:
+        "Destructive Alberta tornado stronger than 95% that touch down in Canada, researcher says",
+      pubDate: "2023-07-03 00:06:11",
+      link: "https://www.cbc.ca/news/canada/calgary/tornado-researcher-connell-miller-carstairs-didsbury-ef2-1.6895578?cmp=rss",
+      guid: "1.6895176",
+      author: "",
+      thumbnail: "",
+      description:
+        '\n<img src="https://i.cbc.ca/1.6895048.1688410745!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_460/tornado.jpg" alt="tornado" width="460" title="A house is no longer visible after a tornado in central Alberta. A woman was rescued from her basement in this area Saturday. " height="259"><p></p>\n',
+      content:
+        '\n<img src="https://i.cbc.ca/1.6895048.1688410745!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_460/tornado.jpg" alt="tornado" width="460" title="A house is no longer visible after a tornado in central Alberta. A woman was rescued from her basement in this area Saturday. " height="259"><p></p>\n',
+      enclosure: {},
+      categories: ["News/Canada"],
+    },
     {
       title:
         "Hundreds displaced as staff residence in Lake Louise engulfed in flames",
@@ -103,76 +103,97 @@ function Home() {
       enclosure: {},
       categories: ["News/Canada/Montreal"],
     },
-    // {
-    //   title:
-    //     "'The abuse of power is obvious,' says Hong Kong activist named in overseas arrest warrant",
-    //   pubDate: "2023-07-03 22:47:34",
-    //   link: "https://www.cbc.ca/radio/asithappens/hong-kong-activist-nathan-law-warrant-1.6895929?cmp=rss",
-    //   guid: "1.6895929",
-    //   author: "Keena Alwahaidi",
-    //   thumbnail: "",
-    //   description:
-    //     '\n<img src="https://i.cbc.ca/1.6895941.1688417643!/cpImage/httpImage/image.jpg_gen/derivatives/16x9_460/italy-china-protest.jpg" alt="Italy China Protest" width="460" title="Hong Kong activist Nathan Law takes part in a protest during a meeting of Chinese Foreign Minister Wang Yi with Italian Foreign Minister Luigi Di Maio, in Rome, Tuesday, Aug. 25, 2020. (AP Photo/Andrew Medichini)" height="259"><p>Hong Kong police have accused eight activists living overseas of national security offences. They are wanted under a national security law that Beijing imposed on the former British colony in 2020, shortly after anti-China protests the previous year. </p>\n',
-    //   content:
-    //     '\n<img src="https://i.cbc.ca/1.6895941.1688417643!/cpImage/httpImage/image.jpg_gen/derivatives/16x9_460/italy-china-protest.jpg" alt="Italy China Protest" width="460" title="Hong Kong activist Nathan Law takes part in a protest during a meeting of Chinese Foreign Minister Wang Yi with Italian Foreign Minister Luigi Di Maio, in Rome, Tuesday, Aug. 25, 2020. (AP Photo/Andrew Medichini)" height="259"><p>Hong Kong police have accused eight activists living overseas of national security offences. They are wanted under a national security law that Beijing imposed on the former British colony in 2020, shortly after anti-China protests the previous year. </p>\n',
-    //   enclosure: {},
-    //   categories: ["Radio/As It Happens"],
-    // },
-    // {
-    //   title:
-    //     "At least 8 Palestinians killed as Israeli troops launch drone strikes on West Bank refugee camp",
-    //   pubDate: "2023-07-03 18:03:56",
-    //   link: "https://www.cbc.ca/news/world/israel-troops-drone-strokes-west-bank-jenin-1.6895576?cmp=rss",
-    //   guid: "1.6895576",
-    //   author: "Reuters",
-    //   thumbnail: "",
-    //   description:
-    //     '\n<img src="https://i.cbc.ca/1.6895594.1688405520!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_460/1427735565.jpg" alt="1427735565" width="460" title="TOPSHOT - Palestinian youths run for cover amid clashes during an Israeli military operation in Jenin city in the occupied West Bank, on July 3, 2023. Israel has stepped up operations in the northern West Bank, home to Jenin city and its adjacent refugee camp, a stronghold of Palestinian armed groups where there has been a spate of attacks on Israelis as well as attacks by Jewish settlers on Palestinian communities. (Photo by Jaafar ASHTIYEH / AFP) (Photo by JAAFAR ASHTIYEH/AFP via Getty Images)" height="259"><p>Israeli forces hit the city of Jenin with drone strikes on Monday as part of one of the biggest West Bank operations in 20 years, killing at least eight Palestinians and wounding dozens of people as gun battles continued into the afternoon.</p>\n',
-    //   content:
-    //     '\n<img src="https://i.cbc.ca/1.6895594.1688405520!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_460/1427735565.jpg" alt="1427735565" width="460" title="TOPSHOT - Palestinian youths run for cover amid clashes during an Israeli military operation in Jenin city in the occupied West Bank, on July 3, 2023. Israel has stepped up operations in the northern West Bank, home to Jenin city and its adjacent refugee camp, a stronghold of Palestinian armed groups where there has been a spate of attacks on Israelis as well as attacks by Jewish settlers on Palestinian communities. (Photo by Jaafar ASHTIYEH / AFP) (Photo by JAAFAR ASHTIYEH/AFP via Getty Images)" height="259"><p>Israeli forces hit the city of Jenin with drone strikes on Monday as part of one of the biggest West Bank operations in 20 years, killing at least eight Palestinians and wounding dozens of people as gun battles continued into the afternoon.</p>\n',
-    //   enclosure: {},
-    //   categories: ["News/World"],
-    // },
-    // {
-    //   title:
-    //     "As housing costs soar, some financial analysts advise to scrap the 30% rule",
-    //   pubDate: "2023-07-02 13:00:00",
-    //   link: "https://www.cbc.ca/news/canada/british-columbia/housing-costs-soar-financial-analysts-30-per-cent-rule-1.6894375?cmp=rss",
-    //   guid: "1.6894375",
-    //   author: "Maryse Zeidler",
-    //   thumbnail: "",
-    //   description:
-    //     '\n<img src="https://i.cbc.ca/1.6323148.1661112947!/cumulusImage/httpImage/image.jpg_gen/derivatives/16x9_460/real-estate-housing-apartments-vancouver.jpg" alt="Real estate, housing, apartments Vancouver" width="460" title="Aerial view of apartments and condo buildings in Vancouver\'s West End neighbourhood, near English Bay. Taken Jan. 20, 2022." height="259"><p>Thirty per cent is the often-touted maximum percentage of your income that you should spend on a home. But in an age where the average one-bedroom apartment in Vancouver rents for $2,787 a month, is that number still realistic?</p>\n',
-    //   content:
-    //     '\n<img src="https://i.cbc.ca/1.6323148.1661112947!/cumulusImage/httpImage/image.jpg_gen/derivatives/16x9_460/real-estate-housing-apartments-vancouver.jpg" alt="Real estate, housing, apartments Vancouver" width="460" title="Aerial view of apartments and condo buildings in Vancouver\'s West End neighbourhood, near English Bay. Taken Jan. 20, 2022." height="259"><p>Thirty per cent is the often-touted maximum percentage of your income that you should spend on a home. But in an age where the average one-bedroom apartment in Vancouver rents for $2,787 a month, is that number still realistic?</p>\n',
-    //   enclosure: {},
-    //   categories: ["News/Canada/British Columbia"],
-    // },
-    // {
-    //   title:
-    //     "Orcas are ramming into boats, but experts warn against calling it revenge on humans",
-    //   pubDate: "2023-07-03 21:43:12",
-    //   link: "https://www.cbc.ca/radio/thecurrent/orca-boat-incidents-social-media-reaction-1.6895465?cmp=rss",
-    //   guid: "1.6895465",
-    //   author: "Magan Carty",
-    //   thumbnail: "",
-    //   description:
-    //     '\n<img src="https://i.cbc.ca/1.6895822.1688419124!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_460/orca-lead.jpg" alt="orca lead" width="460" title="On orca jumps out of water in the sea near Rausu, Hokkaido, Japan. Orcas are commonly known as killer whales but they are actually the largest species of dolphin.    REUTERS/Kim Kyung-Hoon" height="259"><p>Pods of orcas began toying with yachts in 2020, ramming them, spinning them, and in some cases terrifying those on board. This behaviour is gaining momentum off the southwest coast of Europe and experts believe it’s being passed from orca to orca.</p>\n',
-    //   content:
-    //     '\n<img src="https://i.cbc.ca/1.6895822.1688419124!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_460/orca-lead.jpg" alt="orca lead" width="460" title="On orca jumps out of water in the sea near Rausu, Hokkaido, Japan. Orcas are commonly known as killer whales but they are actually the largest species of dolphin.    REUTERS/Kim Kyung-Hoon" height="259"><p>Pods of orcas began toying with yachts in 2020, ramming them, spinning them, and in some cases terrifying those on board. This behaviour is gaining momentum off the southwest coast of Europe and experts believe it’s being passed from orca to orca.</p>\n',
-    //   enclosure: {},
-    //   categories: ["Radio/The Current"],
-    // },
+    {
+      title:
+        "'The abuse of power is obvious,' says Hong Kong activist named in overseas arrest warrant",
+      pubDate: "2023-07-03 22:47:34",
+      link: "https://www.cbc.ca/radio/asithappens/hong-kong-activist-nathan-law-warrant-1.6895929?cmp=rss",
+      guid: "1.6895929",
+      author: "Keena Alwahaidi",
+      thumbnail: "",
+      description:
+        '\n<img src="https://i.cbc.ca/1.6895941.1688417643!/cpImage/httpImage/image.jpg_gen/derivatives/16x9_460/italy-china-protest.jpg" alt="Italy China Protest" width="460" title="Hong Kong activist Nathan Law takes part in a protest during a meeting of Chinese Foreign Minister Wang Yi with Italian Foreign Minister Luigi Di Maio, in Rome, Tuesday, Aug. 25, 2020. (AP Photo/Andrew Medichini)" height="259"><p>Hong Kong police have accused eight activists living overseas of national security offences. They are wanted under a national security law that Beijing imposed on the former British colony in 2020, shortly after anti-China protests the previous year. </p>\n',
+      content:
+        '\n<img src="https://i.cbc.ca/1.6895941.1688417643!/cpImage/httpImage/image.jpg_gen/derivatives/16x9_460/italy-china-protest.jpg" alt="Italy China Protest" width="460" title="Hong Kong activist Nathan Law takes part in a protest during a meeting of Chinese Foreign Minister Wang Yi with Italian Foreign Minister Luigi Di Maio, in Rome, Tuesday, Aug. 25, 2020. (AP Photo/Andrew Medichini)" height="259"><p>Hong Kong police have accused eight activists living overseas of national security offences. They are wanted under a national security law that Beijing imposed on the former British colony in 2020, shortly after anti-China protests the previous year. </p>\n',
+      enclosure: {},
+      categories: ["Radio/As It Happens"],
+    },
+    {
+      title:
+        "At least 8 Palestinians killed as Israeli troops launch drone strikes on West Bank refugee camp",
+      pubDate: "2023-07-03 18:03:56",
+      link: "https://www.cbc.ca/news/world/israel-troops-drone-strokes-west-bank-jenin-1.6895576?cmp=rss",
+      guid: "1.6895576",
+      author: "Reuters",
+      thumbnail: "",
+      description:
+        '\n<img src="https://i.cbc.ca/1.6895594.1688405520!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_460/1427735565.jpg" alt="1427735565" width="460" title="TOPSHOT - Palestinian youths run for cover amid clashes during an Israeli military operation in Jenin city in the occupied West Bank, on July 3, 2023. Israel has stepped up operations in the northern West Bank, home to Jenin city and its adjacent refugee camp, a stronghold of Palestinian armed groups where there has been a spate of attacks on Israelis as well as attacks by Jewish settlers on Palestinian communities. (Photo by Jaafar ASHTIYEH / AFP) (Photo by JAAFAR ASHTIYEH/AFP via Getty Images)" height="259"><p>Israeli forces hit the city of Jenin with drone strikes on Monday as part of one of the biggest West Bank operations in 20 years, killing at least eight Palestinians and wounding dozens of people as gun battles continued into the afternoon.</p>\n',
+      content:
+        '\n<img src="https://i.cbc.ca/1.6895594.1688405520!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_460/1427735565.jpg" alt="1427735565" width="460" title="TOPSHOT - Palestinian youths run for cover amid clashes during an Israeli military operation in Jenin city in the occupied West Bank, on July 3, 2023. Israel has stepped up operations in the northern West Bank, home to Jenin city and its adjacent refugee camp, a stronghold of Palestinian armed groups where there has been a spate of attacks on Israelis as well as attacks by Jewish settlers on Palestinian communities. (Photo by Jaafar ASHTIYEH / AFP) (Photo by JAAFAR ASHTIYEH/AFP via Getty Images)" height="259"><p>Israeli forces hit the city of Jenin with drone strikes on Monday as part of one of the biggest West Bank operations in 20 years, killing at least eight Palestinians and wounding dozens of people as gun battles continued into the afternoon.</p>\n',
+      enclosure: {},
+      categories: ["News/World"],
+    },
+    {
+      title:
+        "As housing costs soar, some financial analysts advise to scrap the 30% rule",
+      pubDate: "2023-07-02 13:00:00",
+      link: "https://www.cbc.ca/news/canada/british-columbia/housing-costs-soar-financial-analysts-30-per-cent-rule-1.6894375?cmp=rss",
+      guid: "1.6894375",
+      author: "Maryse Zeidler",
+      thumbnail: "",
+      description:
+        '\n<img src="https://i.cbc.ca/1.6323148.1661112947!/cumulusImage/httpImage/image.jpg_gen/derivatives/16x9_460/real-estate-housing-apartments-vancouver.jpg" alt="Real estate, housing, apartments Vancouver" width="460" title="Aerial view of apartments and condo buildings in Vancouver\'s West End neighbourhood, near English Bay. Taken Jan. 20, 2022." height="259"><p>Thirty per cent is the often-touted maximum percentage of your income that you should spend on a home. But in an age where the average one-bedroom apartment in Vancouver rents for $2,787 a month, is that number still realistic?</p>\n',
+      content:
+        '\n<img src="https://i.cbc.ca/1.6323148.1661112947!/cumulusImage/httpImage/image.jpg_gen/derivatives/16x9_460/real-estate-housing-apartments-vancouver.jpg" alt="Real estate, housing, apartments Vancouver" width="460" title="Aerial view of apartments and condo buildings in Vancouver\'s West End neighbourhood, near English Bay. Taken Jan. 20, 2022." height="259"><p>Thirty per cent is the often-touted maximum percentage of your income that you should spend on a home. But in an age where the average one-bedroom apartment in Vancouver rents for $2,787 a month, is that number still realistic?</p>\n',
+      enclosure: {},
+      categories: ["News/Canada/British Columbia"],
+    },
+    {
+      title:
+        "Orcas are ramming into boats, but experts warn against calling it revenge on humans",
+      pubDate: "2023-07-03 21:43:12",
+      link: "https://www.cbc.ca/radio/thecurrent/orca-boat-incidents-social-media-reaction-1.6895465?cmp=rss",
+      guid: "1.6895465",
+      author: "Magan Carty",
+      thumbnail: "",
+      description:
+        '\n<img src="https://i.cbc.ca/1.6895822.1688419124!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_460/orca-lead.jpg" alt="orca lead" width="460" title="On orca jumps out of water in the sea near Rausu, Hokkaido, Japan. Orcas are commonly known as killer whales but they are actually the largest species of dolphin.    REUTERS/Kim Kyung-Hoon" height="259"><p>Pods of orcas began toying with yachts in 2020, ramming them, spinning them, and in some cases terrifying those on board. This behaviour is gaining momentum off the southwest coast of Europe and experts believe it’s being passed from orca to orca.</p>\n',
+      content:
+        '\n<img src="https://i.cbc.ca/1.6895822.1688419124!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_460/orca-lead.jpg" alt="orca lead" width="460" title="On orca jumps out of water in the sea near Rausu, Hokkaido, Japan. Orcas are commonly known as killer whales but they are actually the largest species of dolphin.    REUTERS/Kim Kyung-Hoon" height="259"><p>Pods of orcas began toying with yachts in 2020, ramming them, spinning them, and in some cases terrifying those on board. This behaviour is gaining momentum off the southwest coast of Europe and experts believe it’s being passed from orca to orca.</p>\n',
+      enclosure: {},
+      categories: ["Radio/The Current"],
+    },
   ];
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  const newsIndex = items.length - 1;
-  // console.log("newsIndex", newsIndex);
-  const answerIndex = Math.round(Math.random() * newsIndex);
+  const lengthOfNews = items.length - 1;
+
+  const answerIndex = Math.round(Math.random() * lengthOfNews);
   console.log("answerIndex top page", answerIndex);
+
+  const getThreeThumbnails = (items) => {
+    // 1. Create an array of thumbnails
+    const thumbnails = [answerIndex];
+
+    // 2. If thumbnails[] has 4 index, return. No need to add anymore
+    while (thumbnails.length < 4) {
+      // 3. Randomly generate index
+      const randomlyGeneratedIndex = Math.round(Math.random() * lengthOfNews);
+
+      // 4. Condition for avoid putting duplicate index
+      if (
+        randomlyGeneratedIndex !== answerIndex &&
+        !thumbnails.includes(randomlyGeneratedIndex)
+      ) {
+        thumbnails.push(randomlyGeneratedIndex);
+      }
+    }
+
+    return thumbnails;
+  };
 
   return (
     <>
@@ -192,6 +213,7 @@ function Home() {
         <div className="content max-lg:w-4/5 lg:w-[96vw] 2xl:w-[90vw] lg:flex">
           <Headline item={items[answerIndex]} />
           <ThumbnailList
+            thumbnails={getThreeThumbnails(items)}
             items={items}
             answerIndex={answerIndex}
             openModal={openModal}
