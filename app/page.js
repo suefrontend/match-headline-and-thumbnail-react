@@ -10,39 +10,6 @@ function Home() {
   const [answerIndex, setAnswerIndex] = useState(null);
   const [thumbnails, setThumbnails] = useState([]);
 
-  const getThreeThumbnails = (items, answerIndex) => {
-    // 1. Create an array of thumbnails
-    const indexOfThumbnails = [answerIndex];
-
-    // 2. If thumbnails[] has 4 index, return. No need to add anymore
-    while (indexOfThumbnails.length < 4) {
-      // 3. Randomly generate index
-      const randomlyGeneratedIndex = Math.round(Math.random() * items.length);
-
-      // 4. Condition for avoid putting duplicate index
-      if (
-        randomlyGeneratedIndex !== answerIndex &&
-        !indexOfThumbnails.includes(randomlyGeneratedIndex)
-      ) {
-        indexOfThumbnails.push(randomlyGeneratedIndex);
-      }
-    }
-
-    setThumbnails(indexOfThumbnails);
-  };
-
-  useEffect(() => {
-    setTimeout(() => {
-      videoRef.current.play();
-    }, 5000);
-
-    const lengthOfNews = items.length - 1;
-    const index = Math.round(Math.random() * lengthOfNews);
-    setAnswerIndex(index);
-
-    getThreeThumbnails(items, index);
-  }, [answerIndex]);
-
   const items = [
     {
       title:
@@ -193,6 +160,40 @@ function Home() {
       categories: ["Radio/The Current"],
     },
   ];
+
+  const getThreeThumbnails = (items, answerIndex) => {
+    // 1. Create an array of thumbnails
+    const indexOfThumbnails = [answerIndex];
+
+    // 2. If thumbnails[] has 4 index, return. No need to add anymore
+    while (indexOfThumbnails.length < 4) {
+      // 3. Randomly generate index
+      const randomlyGeneratedIndex = Math.round(Math.random() * items.length);
+
+      // 4. Condition for avoid putting duplicate index
+      if (
+        randomlyGeneratedIndex !== answerIndex &&
+        !indexOfThumbnails.includes(randomlyGeneratedIndex)
+      ) {
+        indexOfThumbnails.push(randomlyGeneratedIndex);
+      }
+    }
+
+    setThumbnails(indexOfThumbnails);
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      videoRef.current.play();
+    }, 5000);
+
+    const lengthOfNews = items.length - 1;
+    const index = Math.round(Math.random() * lengthOfNews);
+    setAnswerIndex(index);
+
+    getThreeThumbnails(items, index);
+  }, [answerIndex]);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);

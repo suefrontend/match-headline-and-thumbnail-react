@@ -7,7 +7,9 @@ function ThumbnailList(props) {
   console.log("answerIndex", answerIndex);
   console.log("indexOfThumbnail", indexOfThumbnail);
 
-  const renderedList = indexOfThumbnail.map((index) => {
+  const shuffledIndexOfThumbnail = _.shuffle(indexOfThumbnail);
+
+  const renderedList = shuffledIndexOfThumbnail.map((index) => {
     return (
       <ThumbnailItem
         key={index}
