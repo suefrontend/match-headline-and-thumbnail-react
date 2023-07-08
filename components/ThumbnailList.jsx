@@ -3,7 +3,8 @@
 import ThumbnailItem from "@components/ThumbnailItem";
 
 function ThumbnailList(props) {
-  const { items, openModal, indexOfThumbnail, answerIndex } = props;
+  const { items, openModal, indexOfThumbnail, answerIndex, resetQuiz } = props;
+  console.log("answerIndex", answerIndex);
   console.log("indexOfThumbnail", indexOfThumbnail);
 
   const renderedList = indexOfThumbnail.map((index) => {
@@ -15,6 +16,7 @@ function ThumbnailList(props) {
         answerIndex={answerIndex}
         thumbnailIndex={index}
         openModal={openModal}
+        resetQuiz={resetQuiz}
       />
     );
   });

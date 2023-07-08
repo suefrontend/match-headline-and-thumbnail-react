@@ -3,9 +3,10 @@ import Image from "next/image";
 import { useState } from "react";
 
 function ThumbnailItem(props) {
-  const { openModal, answerIndex, index } = props;
+  const { openModal, answerIndex, index, resetQuiz } = props;
   const [result, setResult] = useState(null);
   const [showButtons, setShowButton] = useState(false);
+  const [disabled, setDisabled] = useState(false);
 
   // Create div element so to access to HTML tags
   const tempElement = document.createElement("div");
@@ -30,9 +31,10 @@ function ThumbnailItem(props) {
       setResult("Correct!");
       console.log("Correct");
       setShowButton(true);
+      setDisabled(true);
 
       // Make other thumbnails unclickable and turn cursor to default
-      return;
+      // return;
       // openModal();
     } else {
       setResult("Incorrect");
@@ -40,11 +42,23 @@ function ThumbnailItem(props) {
     }
   };
 
+  const handleOpenClick = () => {
+    console.log("clicked");
+    openModal();
+  };
+
+  const handleResetQuiz = () => {
+    console.log("reset");
+    resetQuiz();
+  };
+
   return (
     <>
       <li
         onClick={handleShowClick}
-        className="max-lg:w-full relative cursor-pointer"
+        className={`max-lg:w-full relative cursor-pointer ${
+          disabled && "pointer-events-none"
+        }`}
         data-index={index}
       >
         <figure className="thumbnail__item__img w-full">
@@ -60,11 +74,17 @@ function ThumbnailItem(props) {
           <div className="thumbnail-overlay text-white text-sm absolute z-10 top-0 left-0 w-full h-full flex flex-col items-center justify-center">
             <span className={`mb-3 ${showButtons && "text-xl"}`}>{result}</span>
             {showButtons && (
-              <div className="flex flex-col gap-4">
-                <button className="bg-red text-white py-2 px-5 flex-1">
+              <div className="flex flex-col gap-6">
+                <button
+                  onClick={handleOpenClick}
+                  className="bg-red text-white py-2 px-5 flex-1 cursor-pointer pointer-events-auto"
+                >
                   More Detail
                 </button>
-                <span className="text-gray-400 text-center underline text-xs flex-1">
+                <span
+                  onClick={handleResetQuiz}
+                  className="text-gray-400 text-center underline text-xs flex-1 cursor-pointer pointer-events-auto"
+                >
                   Reset
                 </span>
               </div>

@@ -41,7 +41,7 @@ function Home() {
     setAnswerIndex(index);
 
     getThreeThumbnails(items, index);
-  }, []);
+  }, [answerIndex]);
 
   const items = [
     {
@@ -198,6 +198,10 @@ function Home() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
+  const resetQuiz = () => {
+    setAnswerIndex(null);
+  };
+
   console.log("answerIndex", answerIndex);
 
   return (
@@ -224,6 +228,7 @@ function Home() {
                 items={items}
                 answerIndex={answerIndex}
                 openModal={openModal}
+                resetQuiz={resetQuiz}
               />
             </>
           )}
