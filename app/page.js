@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import _ from "lodash";
 import Headline from "@components/Headline";
 import ThumbnailList from "@components/ThumbnailList";
 import Modal from "@components/Modal";
@@ -9,6 +10,7 @@ function Home() {
   const videoRef = useRef();
   const [answerIndex, setAnswerIndex] = useState(null);
   const [thumbnails, setThumbnails] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const items = [
     {
@@ -179,7 +181,10 @@ function Home() {
       }
     }
 
-    setThumbnails(indexOfThumbnails);
+    setThumbnails(_.shuffle(indexOfThumbnails));
+    console.log("Shuffle!");
+
+    // const shuffledIndexOfThumbnail = _.shuffle(indexOfThumbnail);
   };
 
   useEffect(() => {
@@ -193,8 +198,6 @@ function Home() {
 
     getThreeThumbnails(items, index);
   }, [answerIndex]);
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -220,7 +223,7 @@ function Home() {
       {/* wrapper - body */}
       <div className="wrapper p-4">
         {/* content - background */}
-        <div className="content max-lg:w-4/5 lg:w-[96vw] 2xl:w-[90vw] lg:flex">
+        <div className="content max-md:w-[90vw] md:w-[96vw] lg:w-[80vw]">
           {answerIndex && thumbnails && (
             <>
               <Headline item={items[answerIndex]} />
