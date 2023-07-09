@@ -24,10 +24,10 @@
   box-shadow: rgba(99, 0, 0, 0.3) 1px 3px 20px 3px;
   /* width: auto; */
   /* height: 90vh; */
-  position: fixed;
-  z-index: 10;
-  left: 50%;
-  top: 50%;
+  /* position: fixed; */
+  /* z-index: 10; */
+  /* left: 50%;
+  top: 50%; */
   transform: translate(-50%, -50%);
 }
 .headline {

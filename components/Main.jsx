@@ -53,7 +53,7 @@ function Main(props) {
       {/* wrapper - body */}
       <div className="wrapper p-4">
         {/* content - background */}
-        <div className="content max-md:w-[90vw] md:w-[96vw] lg:w-[80vw]">
+        <div className="content max-sm:absolute z-10 max-sm:top-0 max-sm:translate-x-0 max-sm:translate-y-0 max-sm:left-0 sm:top-1/2 sm:left-1/2 sm:fixed max-md:w-[100vw] md:w-[96vw] lg:w-[80vw]">
           {answerIndex && thumbnails && (
             <>
               <Headline item={items[answerIndex]} />
