@@ -1,9 +1,8 @@
-"use client";
-
 import ThumbnailItem from "@components/ThumbnailItem";
 
 function ThumbnailList(props) {
   const { items, openModal, indexOfThumbnail, answerIndex, resetQuiz } = props;
+  console.log("items", items);
 
   const renderedList = indexOfThumbnail.map((index) => {
     return (

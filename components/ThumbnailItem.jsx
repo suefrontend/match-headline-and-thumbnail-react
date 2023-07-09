@@ -7,11 +7,11 @@ function ThumbnailItem(props) {
   const { openModal, answerIndex, index, resetQuiz, image } = props;
   const [result, setResult] = useState(null);
   const [showButtons, setShowButton] = useState(false);
-  const [disabled, setDisabled] = useState(false);
 
   // Create div element so to access to HTML tags
   const tempElement = document.createElement("div");
   tempElement.innerHTML = image;
+  console.log("image", image);
 
   const imgTag = tempElement.getElementsByTagName("img")[0];
 
@@ -30,13 +30,13 @@ function ThumbnailItem(props) {
       setShowButton(true);
 
       // Make other thumbnails unclickable and turn cursor to default
-      setDisabled(true);
+      // setDisabled(true);
     } else {
       setResult("Incorrect");
     }
   };
 
-  console.log("disabled", disabled);
+  // console.log("disabled", disabled);
 
   const handleOpenClick = () => {
     openModal();
@@ -49,7 +49,7 @@ function ThumbnailItem(props) {
   return (
     <>
       <li
-        onClick={disabled ? () => {} : handleShowClick}
+        onClick={handleShowClick}
         className={`thumbnail__item relative cursor-pointer`}
         data-index={index}
       >
