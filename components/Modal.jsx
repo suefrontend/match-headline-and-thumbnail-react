@@ -15,7 +15,6 @@ function Modal(props) {
   tempElement.innerHTML = item.content;
 
   const imgTag = tempElement.getElementsByTagName("img")[0];
-  console.log("imgTag", imgTag);
 
   const src = imgTag.getAttribute("src");
   const alt = imgTag.getAttribute("alt");

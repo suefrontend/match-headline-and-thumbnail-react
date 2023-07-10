@@ -11,7 +11,6 @@ function ThumbnailItem(props) {
   // Create div element so to access to HTML tags
   const tempElement = document.createElement("div");
   tempElement.innerHTML = image;
-  console.log("image", image);
 
   const imgTag = tempElement.getElementsByTagName("img")[0];
 
