@@ -12,7 +12,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  height: 100%;
+  height: 110%;
   background: linear-gradient(
     180deg,
     rgba(184, 4, 4, 0.72) 0%,
@@ -22,12 +22,6 @@
 }
 .content {
   box-shadow: rgba(99, 0, 0, 0.3) 1px 3px 20px 3px;
-  /* width: auto; */
-  /* height: 90vh; */
-  position: fixed;
-  z-index: 10;
-  left: 50%;
-  top: 50%;
   transform: translate(-50%, -50%);
 }
 .headline {
@@ -51,7 +45,6 @@
 .thumbnail__item__img {
   box-shadow: rgba(139, 0, 0, 0.6) 2px 2px 4px 2px;
   overflow: hidden;
-
 }
 .thumbnail-glow {
   box-shadow: rgba(255, 255, 255, 1) 0px 0px 8px 3px;
