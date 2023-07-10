@@ -13,13 +13,17 @@ function Main(props) {
   const [thumbnails, setThumbnails] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  console.log("thumbnails", thumbnails);
+
   const getThreeThumbnails = (data, answerIndex) => {
     // 1. Create an array of thumbnails
     const indexOfThumbnails = [answerIndex];
     // 2. If thumbnails[] has 4 index, return. No need to add anymore
     while (indexOfThumbnails.length < 4) {
       // 3. Randomly generate index
-      const randomlyGeneratedIndex = Math.round(Math.random() * data.length);
+      const randomlyGeneratedIndex = Math.round(
+        Math.random() * (data.length - 1)
+      );
       // 4. Condition for avoid putting duplicate index
       if (
         randomlyGeneratedIndex !== answerIndex &&
