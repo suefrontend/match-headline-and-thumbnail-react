@@ -7,13 +7,10 @@ import Modal from "@components/Modal";
 
 function Main(props) {
   const { items } = props;
-  console.log("items", items);
 
   const [answerIndex, setAnswerIndex] = useState(null);
   const [thumbnails, setThumbnails] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  console.log("thumbnails", thumbnails);
 
   const getThreeThumbnails = (data, answerIndex) => {
     // 1. Create an array of thumbnails
@@ -49,8 +46,6 @@ function Main(props) {
   const resetQuiz = () => {
     setAnswerIndex(null);
   };
-
-  console.log("answerIndex", answerIndex);
 
   return (
     <>

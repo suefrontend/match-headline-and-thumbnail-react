@@ -12,8 +12,6 @@ function Video(props) {
     }, 5000);
   }, []);
 
-  // console.log("video");
-
   return (
     <div className="video-wrapper relative">
       <video

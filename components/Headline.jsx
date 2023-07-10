@@ -1,5 +1,3 @@
-"use client";
-
 function Headline(props) {
   const { item } = props;
 
