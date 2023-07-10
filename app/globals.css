@@ -37,11 +37,6 @@
   border-right: 1px solid rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-/* .thumbnail__item {
-  flex: 1 0 0%;
-  max-width: calc(50% - 0.75rem);
-} */
-
 .thumbnail__item__img {
   box-shadow: rgba(139, 0, 0, 0.6) 2px 2px 4px 2px;
   overflow: hidden;
@@ -69,7 +64,7 @@
   top: 0;
   left: 0;
   z-index: 10;
-  display: none;
+  /* display: none; */
   transition: 0.3s;
 }
 @media (max-width: 460px) {
@@ -78,9 +73,6 @@
   }
   .detail__img {
     height: auto;
-  }
-  .detail__img img {
-    /* height: auto; */
   }
 }
 .btn-link {
