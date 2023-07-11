@@ -1,6 +1,6 @@
 <h1 align="center">SnapNews</h1>
 <h4 align="center">Educational quiz app made in Next.js</h4>
-<img src="images/app-image.jpg" align="center">
+<img src="/screenshot/screenshot01" align="center" alt="Screenshot">
 
 ## Introduction
 
@@ -31,6 +31,12 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Screenshot
+
+![Screenshot](/public/screenshot/screenshot01.png?raw=true "Screenshot")
+
+![Screenshot](/public/screenshot/screenshot02.png?raw=true "Screenshot")
 
 ## Tech Stack
 

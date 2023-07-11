@@ -52,7 +52,7 @@ function ThumbnailItem(props) {
         className={`thumbnail__item relative cursor-pointer`}
         data-index={index}
       >
-        <figure className="thumbnail__item__img relative lg:h-[18rem] max-lg:h-[14rem] max-md:h-[14rem] max-sm:h-[10rem]">
+        <figure className="thumbnail__item__img relative lg:h-[14rem] max-lg:h-[14rem] max-md:h-[14rem] max-sm:h-[10rem]">
           <Image src={src} alt={alt} fill className="object-cover" />
         </figure>
         {result && (
