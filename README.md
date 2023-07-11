@@ -1,6 +1,6 @@
 <h1 align="center">SnapNews</h1>
 <h4 align="center">Educational quiz app made in Next.js</h4>
-<img src="/screenshot/screenshot01" align="center" alt="Screenshot">
+<img src="/public/screenshot/screenshot01" align="center" alt="Screenshot">
 
 ## Introduction
 

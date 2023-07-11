@@ -27,15 +27,10 @@ function ThumbnailItem(props) {
     if (parsedDataIndex === answerIndex) {
       setResult("Correct!");
       setShowButton(true);
-
-      // Make other thumbnails unclickable and turn cursor to default
-      // setDisabled(true);
     } else {
       setResult("Incorrect");
     }
   };
-
-  // console.log("disabled", disabled);
 
   const handleOpenClick = () => {
     openModal();
